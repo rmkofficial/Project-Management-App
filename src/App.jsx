@@ -19,9 +19,7 @@ function App() {
   let content;
   if (projectsState.selectedProjectId === null) {
     content = <NewProject />;
-  } else if (projectsState.selectedProjectId !== undefined) {
-    content = <div>Project selected</div>;
-  } else {
+  } else if (projectsState.selectedProjectId === undefined) {
     content = <NoProjectSelected onStartAddProject={handleStartAddProject} />;
   }
   return (
